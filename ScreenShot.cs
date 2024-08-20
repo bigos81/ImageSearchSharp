@@ -3,7 +3,7 @@
 
 namespace ImageSearchSharp
 {
-    internal static class ScreenShot
+    public static class ScreenShot
     {
         public static Bitmap CaptureScreen()
         {

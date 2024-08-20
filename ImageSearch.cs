@@ -4,7 +4,7 @@ using Point = OpenCvSharp.Point;
 
 namespace ImageSearchSharp
 {
-    internal class ImageSearch
+    public static class ImageSearch
     {
         public static Point FindImageInImage(Bitmap imageToSearch, Bitmap imgageToFind, double treshold)
         {
@@ -45,8 +45,6 @@ namespace ImageSearchSharp
                     result.FloodFill(maxLoc, new Scalar(-1.0));
                     if (!ImageSearchHelpers.ContainsCloseEnoughPoint(resultPointList, maxLoc, template.Width, template.Height))
                         resultPointList.Add(new Point(maxLoc.X, maxLoc.Y));
-                    
-                        
                 }
                 else
                 {
